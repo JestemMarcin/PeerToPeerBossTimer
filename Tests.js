@@ -1,6 +1,5 @@
 import { Boss } from './Boss.js';
-import { ClientPTP } from './ClientPTP.js';
-import { ServerPTP } from './ServerPTP.js';
+import { BossManager } from './BossManager.js';
 
 export class Tests {
   constructor() {
@@ -17,12 +16,13 @@ export class Tests {
 
   test_client_onconnection() {
     let bosses_incoming = [new Boss("Boss", Date.now() - 333), new Boss("Boss2", Date.now() + 999999), new Boss()];
-
+    console.log("ss");
     ///////////////////////
-    let client = new ClientPTP([new Boss("Boss"), new Boss("Boss2")]);
-    client.on_connection(bosses_incoming);
+    let boss_manager = new BossManager([new Boss("Boss"), new Boss("Boss2")]);
+    boss_manager.update_all_bosses(bosses_incoming);
     ////////////////////////
-
+    console.log(boss_manager.bosses);
+    boss_manager.display_all_bosses();
 
   }
 

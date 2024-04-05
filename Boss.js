@@ -6,9 +6,10 @@ export class Boss {
     this.respawned_by = "null";
     this.img_url = null;
 
-    if(respawn_time!=undefined)this.respawn_time=respawn_time;
+    if(respawn_time!=undefined)
+      this.respawn_time=respawn_time;
     else{
-    this.respawn_time=0;
+      this.respawn_time=0;
     }
   }
 
