@@ -1,7 +1,7 @@
 export class ServerPTP {
 
-  constructor() {
-    this.xd = null;
+  constructor(bosses) {
+    this.bosses = bosses;
   }
 
   on_connection() {

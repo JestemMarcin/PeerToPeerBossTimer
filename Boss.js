@@ -1,9 +1,15 @@
 export class Boss {
-  constructor(name) {
-    this.name = name;
-    this.respawn_time = 0; //Date.now();
+
+
+  constructor(name, respawn_time) {
+    this.name = name;//timestamp np. Date.now();
     this.respawned_by = "null";
     this.img_url = null;
+
+    if(respawn_time!=undefined)this.respawn_time=respawn_time;
+    else{
+    this.respawn_time=0;
+    }
   }
 
   show_respawn_time() { // return string of time
