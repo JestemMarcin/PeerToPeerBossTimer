@@ -1,0 +1,22 @@
+Data Exchange Structure:
+  Data between client and peerServer is exchanged in json in format like.
+  {
+    type: string,
+    content: object
+  }
+  
+
+
+
+  Client sends:
+    - Action: 'boss_kill'
+    - Data: {boss_name: string, killed_by: string}
+  
+  Server sends:
+    - Action: 'boss_respawn'
+    - Data: {boss_name: string, respawn_time: timestamp, respawned_by: string}
+
+  
+
+
+  

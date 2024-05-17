@@ -1,0 +1,8 @@
+classes structure:
+      Boss{
+        name: str, //name of the boss
+        respawn_time: timestamp, // timestamp when boss was killed
+        respawned_by: str, // nickname of person who respawned boss
+        img_url: null // url to boss image
+        get_respawn_time() // return 
+      }

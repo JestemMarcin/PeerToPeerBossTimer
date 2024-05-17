@@ -6,14 +6,14 @@ export class Boss {
     this.respawned_by = "null";
     this.img_url = null;
 
-    if(respawn_time!=undefined)
-      this.respawn_time=respawn_time;
-    else{
-      this.respawn_time=0;
+    if (respawn_time != undefined)
+      this.respawn_time = respawn_time;
+    else {
+      this.respawn_time = 0;
     }
   }
 
-  show_respawn_time() { // return string of time
+  get_respawn_time() { // return string of time
     return new Date(this.respawn_time).toTimeString();
   }
 
